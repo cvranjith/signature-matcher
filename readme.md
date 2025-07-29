@@ -2,7 +2,6 @@
 
 This is a lightweight, local-first Python web app for comparing two signature images. It uses pretrained vision models to generate embeddings and evaluates similarity via cosine distance.
 
-Perfect for quick offline testing, demos, or integration into larger identity verification systems.
 
 ---
 
