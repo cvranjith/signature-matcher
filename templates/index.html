@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>Signature Match</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .image-box {
+      text-align: center;
+    }
+    img {
+      max-width: 300px;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload Two Signature Images</h2>
+  <form method="post" enctype="multipart/form-data">
+    <label>Signature 1:</label><input type="file" name="image1" required><br><br>
+    <label>Signature 2:</label><input type="file" name="image2" required><br><br>
+    <input type="submit" value="Compare Signatures">
+  </form>
+
+  {% if result %}
+    <div class="container">
+      <div class="image-box">
+        <h4>Signature 1</h4>
+        <img src="{{ url_for('static', filename='img1.png') }}" alt="Signature 1">
+      </div>
+      <div class="image-box">
+        <h4>Signature 2</h4>
+        <img src="{{ url_for('static', filename='img2.png') }}" alt="Signature 2">
+      </div>
+    </div>
+    <h3>{{ result }}</h3>
+  {% endif %}
+</body>
+</html>
