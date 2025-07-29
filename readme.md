@@ -48,7 +48,7 @@ Perfect for quick offline testing, demos, or integration into larger identity ve
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/your-user/signature-matcher.git
+git clone https://github.com/cvranjith/signature-matcher.git
 cd signature-matcher
 
 python3 -m venv .venv
